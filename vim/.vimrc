@@ -228,7 +228,8 @@ nnoremap <silent> g* g*zz
 " remove highlight
 noremap <silent><leader>/ :nohls<CR>
 
-"Reselect visual block after indent/outdent.调整缩进后自动选中，方便再次操作
+"Reselect visual block after indent/outdent.
+"Automatically selected after adjusting the indentation to facilitate operation again
 vnoremap < <gv
 vnoremap > >gv
 
@@ -236,7 +237,8 @@ vnoremap > >gv
 map Y y$
 
 "Map ; to : and save a million keystrokes
-" ex mode commands made easy 用于快速进入命令行
+" ex mode commands made easy
+"Used to quickly enter the command line
 nnoremap ; :
 
 " save
