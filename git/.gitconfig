@@ -9,3 +9,4 @@
     lg = !"git lg1"
 [core]
 	excludesfile = ~/.gitignore_global
+    pager = diff-so-fancy | less --tabs=4 -RFX
