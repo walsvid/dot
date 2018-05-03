@@ -24,7 +24,7 @@ curl https://raw.githubusercontent.com/walsvid/dot/master/vim/.vimrc > ~/.vimrc
 ### Tmux
 
 #### Install
-##### 1. backup your old .vimrc if it is necessary
+##### 1. backup your old .tmux.conf if it is necessary
 
 ```
 cp ~/.tmux.conf ~/.tmux.conf_bak
