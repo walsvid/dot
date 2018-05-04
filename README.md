@@ -14,7 +14,7 @@ cp ~/.vimrc ~/.vimrc_bak
 using `curl`
 
 ```
-curl https://raw.githubusercontent.com/walsvid/dot/master/vim/.vimrc > ~/.vimrc
+curl https://raw.githubusercontent.com/walsvid/dot/master/vim/vimrc > ~/.vimrc
 ```
 
 ##### 3. enjoy it
