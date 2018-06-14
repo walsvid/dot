@@ -199,6 +199,7 @@ if count(g:bundle_groups, 'python')
     Plug 'fisadev/vim-isort'
     " Shift-V 上下选中, ctrl + i 规范化
     let g:vim_isort_map = '<C-i>'
+    Plug 'sillybun/vim-repl'
 endif
 
 if count(g:bundle_groups, 'php')
@@ -861,7 +862,7 @@ endif
     \}
 
     let g:quickrun_no_default_key_mappings = 1
-    nmap <Leader>r <Plug>(quickrun)
+    " nmap <Leader>r <Plug>(quickrun)
     map <F10> :QuickRun<CR>
 " }}}
 
@@ -926,6 +927,28 @@ endif
     " keys
     " nnoremap <silent> <leader>es :Esformatter<CR>
     " vnoremap <silent> <leader>es :EsformatterVisual<CR>
+
+" }}}
+
+" repl {{{
+    nnoremap <leader>r :REPLToggle<Cr>
+    let g:sendtorepl_invoke_key = "<leader>w"          "传送代码快捷键，默认为<leader>w
+    let g:repl_position = 0                             "0表示出现在下方，1表示出现在上方，2在左边，3在右边
+    let g:repl_stayatrepl_when_open = 0         "打开REPL时是回到原文件（1）还是停留在REPL窗口中（0）
+    tnoremap <C-h> <C-w><C-h>
+    tnoremap <C-j> <C-w><C-j>
+    tnoremap <C-k> <C-w><C-k>
+    tnoremap <C-l> <C-w><C-l>
+    let g:repl_program = {
+        \    "python": "ipython3",
+        \    "default": "zsh"
+        \    }
+    let g:repl_exit_commands = {
+                \    "python": "exit()",
+                \    "bash": "exit",
+                \    "zsh": "exit",
+                \    "default": "exit",
+                \    }
 
 " }}}
 
