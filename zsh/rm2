@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+LOSTFOUNDDIR="$HOME/you_can_delete_all_files_in_me/"`date +"%Y%m%d-%H%M-%S"`"/"
+
+BASEDIR=`pwd`
+
+
+while(($#>0));do
+    file=$1
+    tfile=""
+    tmp=`echo ${file:0:1}`
+    if [ "$tmp" = "/" ];then
+        tfile=${file}
+    else
+        tfile=${BASEDIR}"/"${file} 
+    fi
+	
+    if [ -e ${tfile} ];then
+        mkdir -p ${LOSTFOUNDDIR}`dirname ${tfile}`
+        mv ${tfile} ${LOSTFOUNDDIR}${tfile}
+    fi
+
+    shift
+done 
